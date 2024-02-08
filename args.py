@@ -40,7 +40,7 @@ class Arguments:
 
         # dataset
         parser.add_argument("--dataset_name", type=str, default="cv", choices=["cs", "cv", "voc"])
-        parser.add_argument("--dir_datasets", type=str, default="/scratch/shared/beegfs/gyungin/datasets")
+        parser.add_argument("--dir_datasets", type=str, default="C:\Users\ttssi\Desktop\Research\dataset")
         parser.add_argument("--downsample", type=int, default=4, help="downsample for Cityscapes training set")
         parser.add_argument("--use_aug", type=bool, default=True, help="data augmentation")
         parser.add_argument("--use_augmented_dataset", action="store_true", default=False,
