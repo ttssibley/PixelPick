@@ -40,7 +40,7 @@ class Arguments:
 
         # dataset
         parser.add_argument("--dataset_name", type=str, default="cv", choices=["cs", "cv", "voc"])
-        parser.add_argument("--dir_datasets", type=str, default="C:\Users\ttssi\Desktop\Research\dataset")
+        parser.add_argument("--dir_datasets", type=str, default="C:/Users/ttssi/Desktop/Research/dataset")
         parser.add_argument("--downsample", type=int, default=4, help="downsample for Cityscapes training set")
         parser.add_argument("--use_aug", type=bool, default=True, help="data augmentation")
         parser.add_argument("--use_augmented_dataset", action="store_true", default=False,
@@ -87,7 +87,7 @@ class Arguments:
         else:
             if args.dataset_name == "cs":
                 args.batch_size = 4
-                args.dir_dataset = "/scratch/shared/beegfs/gyungin/datasets/cityscapes"
+                args.dir_dataset = "C:/Users/ttssi/Desktop/Research/dataset/cityscapes"
                 args.ignore_index = 19
                 args.mean, args.std = [0.28689554, 0.32513303, 0.28389177], [0.18696375, 0.19017339, 0.18720214]
                 args.n_classes = 19
@@ -107,7 +107,7 @@ class Arguments:
 
             elif args.dataset_name == "cv":
                 args.batch_size = 4
-                args.dir_dataset = "/Users/noel/Desktop/pixelpick/pixelpick_via_launch/camvid"
+                args.dir_dataset = "C:/Users/ttssi/Desktop/Research/dataset/camvid"
                 args.downsample = 1
                 args.ignore_index = 11
                 args.mean = [0.41189489566336, 0.4251328133025, 0.4326707089857]
@@ -129,8 +129,8 @@ class Arguments:
 
             elif args.dataset_name == "voc":
                 args.batch_size = 10
-                args.dir_dataset = "/scratch/shared/beegfs/gyungin/datasets/VOC2012"
-                args.dir_augmented_dataset = "/scratch/shared/beegfs/gyungin/datasets/VOC2012/VOCdevkit/VOC2012/train_aug"
+                args.dir_dataset = "C:/Users/ttssi/Desktop/Research/dataset/VOC2012"
+                args.dir_augmented_dataset = "C:/Users/ttssi/Desktop/Research/dataset/VOC2012/VOCdevkit/VOC2012/train_aug"
                 args.ignore_index = 255
                 args.mean, args.std = [0.485, 0.456, 0.406], [0.229, 0.224, 0.225]
                 args.n_classes = 21
