@@ -78,7 +78,7 @@ class Arguments:
 
         if args.p_dataset_config is not None:
             assert os.path.exists(args.p_dataset_config), FileNotFoundError(args.p_dataset_config)
-            # args: Namespace = parser.parse_args()
+            args: Namespace = parser.parse_args()
             dataset_config = yaml.safe_load(open(f"{args.p_dataset_config}", 'r'))
             args: dict = vars(args)
             args.update(dataset_config)
